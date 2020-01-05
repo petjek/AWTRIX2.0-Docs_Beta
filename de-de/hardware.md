@@ -11,9 +11,9 @@ In unserem Shop gibt es die Leiterplatten zu kaufen. Diese sind entweder einzeln
 ### Zwingend benötigte Bauteile
 | Nr | Name                     | Link                            |
 | -  |:------------------------:| :------------------------------:|
-| 1  | Awtrix Mainboard Bausatz | [click here](https://google.de) |
-| 2  | 32x8 Matrix              | [click here](https://blueforcer.de/shop/) |
-| 3  | Awtrix Gehäuse       | [click here](https://blueforcer.de/shop/) |
+| 1  | Awtrix Mainboard Bausatz | [click here](https://blueforcer.de/produkt/awtrix-mainboard-2-0-bausatz/) |
+| 2  | 32x8 Matrix              | [click here](https://www.amazon.de/dp/B07KT1H481/ref=cm_sw_em_r_mt_dp_U_hm1dEbB1EFXE4) |
+| 3  | Awtrix Gehäuse       | [click here](https://www.thingiverse.com/search?q=Awtrix&dwh=425e0f5463a8252) |
 | 4  | Wemos D1 mini            | [click here](https://goo.gl/TVk7h7) |
 | 5  | Netzteil (>3A)           | [click here](https://goo.gl/QLydM3) |
 | 6  | Strombuchse              | [click here](https://goo.gl/j4Xov7) |
@@ -24,8 +24,8 @@ In unserem Shop gibt es die Leiterplatten zu kaufen. Diese sind entweder einzeln
 | -  |:------------------------:| :------------------------------:|
 | 1  | LDR GL5528               | [click here](https://www.amazon.de/Qualit%C3%A4t-GL5516-Lichtabh%C3%A4ngige-Widerstand-Fotowiderstand/dp/B00NXW9WZ6/) |
 | 2  | DF Mini Player           | [click here](https://www.banggood.com/Geekcreit-DFPlayer-Mini-MP3-Player-Module-MP3-Voice-Audio-Decoder-Board-For-Arduino-Supporting-TF-Card-U-Disk-IOSerial-PortAD-p-969191.html?akmClientCountry=DE&&cur_warehouse=UK) |
-| 3.1| Htui21d                  | [click here](https://google.de) |
-| 3.2| BME280                   | [click here](https://google.de) |
+| 3.1| Htui21d                  | [click here](https://www.google.com/search?sxsrf=ACYBGNSRp5ZO5K2-pnWJ4o3-duttcXxHjw:1578063110543&q=Htu21d&spell=1&sa=X&ved=2ahUKEwi-_ouZ1-fmAhWBEVAKHTZvDA8QBSgAegQICBAn&biw=1718&bih=1283) |
+| 3.2| BME280                   | [click here](https://www.google.com/search?biw=1718&bih=1283&sxsrf=ACYBGNTs_KPVf9kgTZO8iJ_q_Wi6Yj-W-Q%3A1578063173049&ei=RVUPXsTSAofSwAL4u7WYBg&q=BME280&oq=BME280&gs_l=psy-ab.3..35i39l2j0i203l8.11392.11613..11770...0.2..0.73.143.2......0....1..gws-wiz.......0i71j0i7i10i30j0i7i30.4GuYcDy5H-w&ved=0ahUKEwiEifO21-fmAhUHKVAKHfhdDWMQ4dUDCAs&uact=5) |
 | 4  | Lautsprecher             | [click here](https://de.aliexpress.com/item/32853811267.html) |
 
 Die Touchsensoren sind hier nicht mit aufgeführt, weil sie Teil des Bausatzes sind und daher nicht gekauft werden müssen.
@@ -35,9 +35,9 @@ Die Touchsensoren sind hier nicht mit aufgeführt, weil sie Teil des Bausatzes s
 ### Zwingend benötigte Bauteile
 | Nr | Name                     | Link                            |
 | -  |:------------------------:| :------------------------------:|
-| 1  | Awtrix Mainboard Bausatz | [click here](https://google.de) |
+| 1  | Awtrix Mainboard         | [click here](https://blueforcer.de/produkt/awtrix-mainboard-2-0/) |
 | 2  | Wemos D1 mini            | [click here](https://goo.gl/TVk7h7) |
-| 3  | 32x8 Matrix               | [click here](https://blueforcer.de/shop/) |
+| 3  | 32x8 Matrix              | [click here](https://www.amazon.de/dp/B07KT1H481/ref=cm_sw_em_r_mt_dp_U_hm1dEbB1EFXE4) |
 | 4  | Netzteil (>3A)           | [click here](https://goo.gl/QLydM3) |
 | 5  | Strombuchse              | [click here](https://goo.gl/j4Xov7) |
 | 6  | Widerstände (3x 1k)      | [click here](https://google.de) |
@@ -65,12 +65,12 @@ Die Elektronik kann entweder auf eine Lochrasterplatine gelötet ("frei verdraht
 ![Basissetup](\assets\pro\AWTRIX_Core_Steckplatine.jpg)
 
 ## Lichtsensor zur Helligkeitsregelung (optional)
-Der Helligkeitssensor kann optinal eingebaut werden. Dieser sorgt dafür, dass beispielsweise in einem dunklen Raum, durch herunter dimmen der Helligkeit, die Matrix nicht blendet. Anders herum wird die Matrix bei einer hohen Helligkeit im Raum hoch gedimmt, damit man den Inhalt der Matrix noch lesen kann.
+Der Helligkeitssensor kann optinal eingebaut werden. Dieser sorgt dafür, dass - beispielsweise in einem dunklen Raum - durch herunterdimmen der Helligkeit, die Matrix nicht blendet. Anders herum wird die Matrix bei einer hohen Helligkeit im Raum hoch gedimmt, damit man den Inhalt der Matrix noch lesen kann.
 
 ![ldr](\assets\pro\AWTRIX_LDR_Steckplatine.jpg)
 
 ## DFPlayer Mini zur Soundausgabe (optional)
-Der DFPlayer dient zur Ausgabe von Sounds und ist optinal verwendbar. Es werden mp3 Dateien auf einer Speicherkarte gespeichert, welche in das Micro-SD Fach des Players eingesteckt wird. Dies ermöglicht es dir, dass deine Matrix beispielsweise mit dir spricht. Das hinzufügen von mp3 Dateien kann leider nur über die SD Karte am PC erfolgen. Ein hochladen vom Server oder ähnliches ist technisch leider nicht möglich.
+Der DFPlayer dient zur Ausgabe von Sounds und ist ebenfalls optinal verwendbar. Es werden .mp3-Dateien auf einer Speicherkarte gespeichert, welche in das Micro-SD-Fach des Players eingesteckt wird. Dies ermöglicht es, dass deine Matrix beispielsweise mit dir spricht. Das hinzufügen von .mp3-Dateien kann leider nur über die SD Karte am PC erfolgen. Ein hochladen vom Server oder ähnliches ist technisch leider nicht möglich.
 
 ![](\assets\pro\AWTRIX_DFMini_Steckplatine.jpg)
 
@@ -107,7 +107,7 @@ Bei Verwendung von Temperatur- und Gestensensor werden die Pins D1 & D3 des Wemo
 | D4    | -  | I/O  | -            | Tastsignal  | Brücke A zulöten |
 | D5    | -  | -  | I/O            | Tastsignal  |  |
 
-Die Touch Sensoren haben auf der kleinen Leiterplatte zwei Brücken die mann mit Lötzinn verschließen kann. Dies wird beim mittleren Sensor zwingend benötigt, da der Wemos anssonsten nicht mehr startet. Um dies zu verhindern muss beim **mittleren Touch Taster die Brücke A geschlossen** werden. Dadurch wird der I/O Pin auf Active Low gestellt. Andere Touch Sensoren werden nicht empfohlen, da sie erstens nicht fürs Gehäuse vorgesehen sind (andere Maße) und zweitens keine Möglichkeit besitzen eine Brücke einzulöten.
+Die Touch Sensoren haben auf der kleinen Leiterplatte zwei Brücken, die mann mit Lötzinn verschließen kann. Dies wird beim mittleren Sensor zwingend benötigt, da der Wemos anssonsten nicht mehr startet. Um dies zu verhindern muss beim **mittleren Touch Taster die Brücke A geschlossen** werden. Dadurch wird der I/O Pin auf Active Low gestellt. Andere Touch Sensoren werden nicht empfohlen, da sie erstens nicht fürs Gehäuse vorgesehen sind (andere Maße) und zweitens keine Möglichkeit besitzen eine Brücke einzulöten.
 
 ## Gestensensor zur Bedienung (optional)
 Der Gestensensor kann optinal zur einfachen Bedienung der Matrix benutzt werden. Gesten wie mit der Hand von links nach rechts wischen oder anders herum sind hier möglich.
@@ -126,14 +126,14 @@ Bei Verwendung von Temperatur- und Gestensensor werden die Pins D1 & D3 des Wemo
 
 ## Serielle Verbindung oder USB-Verbindung zur Matrix
 
-Wenn es Probleme bei der WiFi-Übertragung zwischen Server und Controller gibt, gibt es die Möglichkeit den Server direkt per Serial an den Controller (Wemos D1 Mini) anzuschließen.
+Wenn es zu Problemen bei der WiFi-Übertragung zwischen Server und Controller kommt, gibt es die Möglichkeit den Server direkt per Serial an den Controller (Wemos D1 Mini) anzuschließen.
 
 Auf Controller-Seite muss hierfür im Hotspot Menü der Haken bei Serial gesetzt werden. Außerdem braucht der Wemos weiterhin zwingend eine Verbindung zu einem Netzwerk. Ansonsten öffnet er immer wieder den Hotspot und zeigt damit auch nichts anderes an.
 Die WiFi Verbindung wird verwendet, um den Controller auch weiterhin updaten zu können.
 
 Es kann auch der **USB-Port** des Pi's verwendet werden (auch für jede andere Serverplattform). Dazu muss man einfach den Server per microUSB-Kabel an den Wemos D1 anschließen.
 
-Bei Verwenudng der **GPIO's** wird der Pi wie folgt mit dem Wemos verbunden:
+Bei Verwenudng der **GPIOs** wird der Pi wie folgt mit dem Wemos verbunden:
 
 ![](\assets\pro\AWTRIX_raspi_V2_Steckplatine.jpg)
 
@@ -144,11 +144,25 @@ Bei Verwenudng der **GPIO's** wird der Pi wie folgt mit dem Wemos verbunden:
 | RX    | 08 - TXD         | Transmit (senden) |
 | TX    | 10 - RXD         | Receive (empfangen)  |
 
-**Bitte zwingend auf die Raspberry Version achten. Hier kann es unterschiede geben!**
+**Bitte zwingend auf die Raspberry Version achten. Hier kann es Unterschiede geben!**
 
-Standartmäßig muss beim Raspberry die serielle Schnittstelle freigeschaltet werden, dazu folgende Zeile in der /boot/config.txt eingetragen werden  
+Standartmäßig muss beim Raspberry die serielle Schnittstelle freigeschaltet werden. Dies kann auf zwei unterschiedlichen Wegen realisiert werden.
+Grundsätzlich muss auf den Raspi per ssh zugegriffen werden können. Wenn dies nicht bereits geschehen ist, bitte wie folgt ssh aktivieren:
+- Raspi runter fahren und die SD-Karte entnehmen.
+- Am PC/Mac die SD-Karte einstecken und im root-Verzeichnis eine leere Datei mit dem Namen **ssh** anlegen. Die Datei darf keine Endung haben (z.B. .txt; bitte darauf achten, falls du die Datei mit einem Texteditor anlegst)
+- Die Karte wieder in den Raspi stecken und diesen starten.
+
+Der Raspi ist nun über das Netzwerk per ssh erreichbar. Passende Programme dafür sind [Putty](https://www.putty.org/) oder [Termius](https://termius.com/). 
+
+Bist du mit dem Raspi verbunden, kann das Raspberry-Konfigarionsmenü per   
+`sudo raspi-config`
+aufgerufen werden. Dort im Menüpunkt **5 Interfacing Options - P6 Serial** die Abfrage mit Ja bzw. Yes beantworten.
+
+Wer es lieber manuell in der /boot/config.txt machen will kann auch `nano /boot/config.txt` eingeben und in der Konfigurationsdatei nach dem Wert
+`enable_uart` suchen und diesen auf 1 setzen.
 `enable_uart=1`
 
+In beiden Fällen muss der Raspi im Anschluss neu gestartet werden.
 
 # Gehäuse
 
