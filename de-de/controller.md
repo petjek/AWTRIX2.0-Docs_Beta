@@ -50,6 +50,19 @@ Writing at 0x00000000... (0 %)
 Dann ist alles in Ordnung....
 Wenn es nach ein paar Sekunden nicht ankommt.... hast möglicherweise ein Problem mit dem Anschluss des ESP8266 an den UART.
 
+### Alternative für MacOS
+
+Lade dir im Apple App-Store die kostenlose App [ESP8266Flash](https://apps.apple.com/us/app/esp8266flash/id1344542675?mt=12) runter. Diese App stellt ein benutzerfreundliches Interface zum ESPTool zur Verfügung, das wie oben beschrieben zusätzlich installiert sein muss.
+
+## Erneutes Flashen des Wemos D1 mini über das Web-Interface
+
+Nachdem die Firmware einmal installiert ist, können Updates auch über das in die Firmware integrierte Web-Interface eingespielt werden. Dazu muss du auf deinem Router die IP-Adresse deines Wemos D1 mini ermitteln. Der Controller hat einem Namen nach dem Muster ESP-12XY34. Die IP-Adresse kopierst du in die Adresszeile deines Browsers.
+
+Das Ergebnis sollte so aussehen:
+
+![](\assets\firmware\espWebIF.png)
+
+Über "Datei auswählen" wird die neue Firmware selektiert und anschließend über "Update" auf den Wemos geladen. Anschließend den Wemos einmal resetten.
 
 ## Erster Start
 ![](\assets\firmware\wifiSearch.gif)
@@ -60,7 +73,7 @@ Für ein paar Sekunden sucht der Controller nun nach einem bekannten WiFi Netzwe
 
 ![](\assets\firmware\hotspot.gif)
 
-Wenn noch keine Wifi.Verbindung konfiguriert ist kommt nun der Text "Hotspot" auf der Matrix. Wie der Name schon sagt, macht der Controller nun einen WLAN Hotspot auf. Mit einem beliebigen WLAN Gerät kann der Controller nun über den Hotspot konfiguriert werden.
+Wenn noch keine Wifi-Verbindung konfiguriert ist erscheint der Text "Hotspot" auf der Matrix. Wie der Name schon sagt, macht der Controller nun einen WLAN Hotspot auf. Mit einem beliebigen WLAN Gerät kann der Controller nun über den Hotspot konfiguriert werden.
 1. Verbinde dich mit dem WLAN mit der SSID "**AWTRIX Controller**".
 2. Das WLAN Passwort lautet "**awtrixxx**"
 3. Wenn sich nicht automatisch eine Webseite öffnet, kann unter der IP "**172.217.28.1**  über einen beliebigen Browser auf die Einstellungsseite navigiert werden. Diese Seite sieht wie folgt aus:

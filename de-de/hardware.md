@@ -146,20 +146,28 @@ Bei Verwenudng der **GPIOs** wird der Pi wie folgt mit dem Wemos verbunden:
 
 **Bitte zwingend auf die Raspberry Version achten. Hier kann es Unterschiede geben!**
 
-Standartmäßig muss beim Raspberry die serielle Schnittstelle freigeschaltet werden. Dies kann auf zwei unterschiedlichen Wegen realisiert werden.
-Grundsätzlich muss auf den Raspi per ssh zugegriffen werden können. Wenn dies nicht bereits geschehen ist, bitte wie folgt ssh aktivieren:
+Beim Raspberry muss die serielle Schnittstelle aktiviert werden.
+Dazu muss auf den Raspi per ssh zugegriffen werden können. Wenn dies nicht bereits geschehen ist, bitte wie folgt ssh aktivieren:
 - Raspi runter fahren und die SD-Karte entnehmen.
 - Am PC/Mac die SD-Karte einstecken und im root-Verzeichnis eine leere Datei mit dem Namen **ssh** anlegen. Die Datei darf keine Endung haben (z.B. .txt; bitte darauf achten, falls du die Datei mit einem Texteditor anlegst)
 - Die Karte wieder in den Raspi stecken und diesen starten.
 
 Der Raspi ist nun über das Netzwerk per ssh erreichbar. Passende Programme dafür sind [Putty](https://www.putty.org/) oder [Termius](https://termius.com/). 
 
+Ein wichtiger Sicherheitshinweis:
+
+Sollte dich dein Raspberry Pi beim Start darauf hinweisen, dass bei aktivem ssh-Zugriff das Passwort für den Benutzer "pi" noch das Standardpasswort (raspberry) ist, igrnoriere das im eigenen Interesse **NICHT**! Das Passwort ist schnell geändert mittels
+`sudo passwd`
+
+Anschließend einmal das alte Passwort (in diesem Falle _raspberry_) und anschließend dein neues Passwort 2x eingeben. Und: nein, nicht 1234! 
+
 Bist du mit dem Raspi verbunden, kann das Raspberry-Konfigarionsmenü per   
 `sudo raspi-config`
 aufgerufen werden. Dort im Menüpunkt **5 Interfacing Options - P6 Serial** die Abfrage mit Ja bzw. Yes beantworten.
 
-Wer es lieber manuell in der /boot/config.txt machen will kann auch `nano /boot/config.txt` eingeben und in der Konfigurationsdatei nach dem Wert
+Wer es lieber manuell in der /boot/config.txt anpassen möchte, kann auch mit `nano /boot/config.txt` den Texteditor starten und in der Konfigurationsdatei nach dem Wert
 `enable_uart` suchen und diesen auf 1 setzen.
+
 `enable_uart=1`
 
 In beiden Fällen muss der Raspi im Anschluss neu gestartet werden.
@@ -176,7 +184,7 @@ Die 3D-Objekte sind bereits so ausgerichtet, das möglichst wenig Hilfsmaterial 
 
 - 0.2 mm Layerhöhe
 
-- 20% infill
+- 20% Infill
 
 - Support vom Druckbett
 
@@ -184,8 +192,16 @@ Die 3D-Objekte sind bereits so ausgerichtet, das möglichst wenig Hilfsmaterial 
 
 ## Zusammenbau
 
-Kleben Sie zunächst die beiden Teile für das LED-Gitter auf der Innenseite zusammen.
-Als Diffusor habe ich hochwertiges und dickeres Papier verwendet - es ist wichtig, dass man die Fasern nicht sieht, wenn man sie gegen helles Licht hält wie normales Druckerpapier.
-Schmieren Sie dann die flache Seite des LED-Rasters mit Klebestift und kleben Sie das Papier darauf.
-Dies ist am besten dort zu tun, wo Awtrix landen wird. Aufgrund hoher Temperatur- und Feuchtigkeitsschwankungen kann sich das Papier leicht verziehen.
-Dann die beiden Gehäuseteile zusammensetzen und ggf. mit etwas Kleber fixieren. Löten Sie 2 Kabel an die Buchse und schrauben Sie sie an das Gehäuse. Sie können dann direkt mit der restlichen Verkabelung fortfahren. Der LDR kann durch eine der oberen 5mm Lüftungsöffnungen gesteckt werden. Wenn alles fertig ist, legen Sie den Diffusor nach unten und legen Sie die LED-Matrix darauf, die perfekt in die Nut passen sollte, und drücken Sie das Gehäuse auf das LED-Raster. Dann drehen Sie alles auf der Rückseite um und befestigen Sie den Vorderrahmen.
+- Kleben Sie zunächst die beiden Teile für das LED-Gitter auf der Innenseite zusammen.
+Als Diffusor kann hochwertiges und dickeres Papier verwendet werden. Es ist wichtig, dass man die Fasern nicht sieht, wenn man sie gegen helles Licht (wie bei normalem Druckerpapier).
+- Anschließend den Rahmen der flachen Seite des LED-Rasters vorsichtig mit Klebestift bestreichen und das Papier aufkleben. Dabei unbedingt darauf achten, dass keine _Gnubbel_ vom Klebestift am Raster hängen geblieben sind, denn diese würde man später unweigerlich sehen.
+Dies Verkleben ist am besten dort durchzuführen, wo Awtrix später auch stehen wird. Aufgrund von Temperatur- und Feuchtigkeitsschwankungen kann sich das Papier leicht verziehen. Abhilfe können hier winzige Mengen Sekundenklebers an ein paar Schnittpunkten des Rasters schaffen. Aber wirklich winzige Mengen!
+- Dann die beiden Gehäuseteile zusammensetzen und ggf. mit etwas Kleber fixieren.
+- Für die Stromversorgung zwei Kabel an die Buchse anlöten und in das Gehäuse schrauben.
+- Anschließend kann die restlichen Verkabelung erfolgen.
+- Der LDR kann durch eine der oberen 5mm Lüftungsöffnungen gesteckt werden.
+- Wenn alles fertig ist, den Diffusor flach hin und die LED-Matrix auflegen, die perfekt in die Nut passen sollte.
+- Jetzt das Gehäuse auf das LED-Raster legen. 
+- Abschließend alles auf die Rückseite drehen und den Vorderrahmen befestigen.
+
+Viele Anwender haben eigene Gehäuse entworfen und gebaut. Einfach mal [hier](https://forum.blueforcer.de/d/22-show-your-awtrix) rein schauen.
