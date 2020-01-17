@@ -1,7 +1,7 @@
 !> Die Hostsoftware ist auf nicht absehbarer Zeit closed source!
 
-Bitte beachten Sie, dass Java nicht sehr ressourcenschonend ist.
-Wenn Du einen Raspberry verwenden möchtes, empfehle ich mindestens einen Raspberry 3+ oder vergleichbar. AWTRIX läuft zwar mit einem ZeroW, aber etwas langsamer. 
+Bitte beachte, dass Java nicht sehr ressourcenschonend ist.
+Wenn Du einen Raspberry verwenden möchtes, empfehlen wir mindestens einen Raspberry 3+ oder vergleichbar. Einige Benutzer habe AWTRIX auch auf einemRaspberry Zero W laufen, dies ist jedoch nicht zu empfehlen, da die Ressourcen eigentlich nicht ausreichend für den Betrieb des Hosts sind. Also nicht meckern, wenn's nicht klappt.
 
 
 AWTRIX 2.0 kann auf jeder Plattform (Windows, MacOS, Linux) laufen, die einzige Voraussetzung ist die Unterstützung von Java 8 (1.8_232). Es handelt sich um eine Nicht-GUI-Anwendung, sodass keine Desktop-Umgebung benötigt wird.   
@@ -10,12 +10,12 @@ Dieses Tutorial beschreibt die Installation auf einem Linux-Rechner.
 
 ## Schnellstart
 Dieses kurze Beispiel zeigt, wie man die Java-Anwendung startet.
-Gehen Sie zum nächsten Punkt für die Installation auf einer Linux-Maschine.
+Gehe zum nächsten Punkt für die Installation auf einer Linux-Maschine.
 
 Die aktuelle [AWTRIX Java-Anwendung](https://blueforcer.de/awtrix/beta/awtrix.jar)
  herunterladen
 
- und starten Sie es über die Kommandozeile oder das Terminal. 
+ und starten über die Kommandozeile oder das Terminal. 
 
 **Linux & MacOS:**    
  ``` sudo java -jar awtrix.jar ```      
@@ -23,44 +23,41 @@ Die aktuelle [AWTRIX Java-Anwendung](https://blueforcer.de/awtrix/beta/awtrix.ja
  ``` java -jar awtrix.jar ```
 
    
-!> **sudo** wird nicht immer benötigt. Es hängt davon ab, in welchem Ordner Sie die Anwendung starten möchten. AWTRIX muss neue Ordner und Dateien erstellen, so dass AWTRIX in wenigen Fällen keine Schreibrechte hat.
+!> **sudo** wird nicht immer benötigt. Es hängt davon ab, in welchem Ordner Du die Anwendung starten möchten. AWTRIX muss neue Ordner und Dateien erstellen, so dass AWTRIX in wenigen Fällen keine Schreibrechte hat.
 
 Kurz nach dem Start kann das Webinterface über http://awtrix_ip:7000 aufgerufen werden.
 
-## Beta
-I highly recommend the current Beta Server!  
-[All about Beta Server](https://forum.blueforcer.de/d/295)  
-
-You can use the installer by adding the beta parameter:  
- ```wget -N https://blueforcer.de/awtrix/AWTRIX.sh ; sudo sh AWTRIX.sh beta```  
-Or via manual download: [AWTRIX BETA application](https://blueforcer.de/beta/awtrix.jar)  
-
-
-
 ## Raspberry Installer
-Enter following command into your terminal for automatic installation  
+Für die automatische Installation aller benötigter Komponenten den folgenden Befehl im Terminal eingeben.
  ```wget -N https://blueforcer.de/awtrix/AWTRIX.sh ; sudo sh AWTRIX.sh```
 
-?> Shortly after the start the web interface can be called via http://awtrix_ip:7000.  
-You can also use this command to update your AWTRIX.  
+?> Kurz nach dem Start kann das Webinterface über http://awtrix_ip:7000 aufgerufen werden.  
+Der Befehl kann auch für Updates deiner aktuellen Installation genutzt werden.
 
+## Beta
+Wir empfehlen die aktuelle Beta des Hosts zu benutzen!  
+[Infos zum Beta Host](https://forum.blueforcer.de/d/295)  
 
+Der Installer kann auch hier genutzt werden. Es muss nur der Parameter "beta" hinzugefügt werden:
+ ```wget -N https://blueforcer.de/awtrix/AWTRIX.sh ; sudo sh AWTRIX.sh beta```  
+Manueller Download: [AWTRIX BETA Host](https://blueforcer.de/beta/awtrix.jar)  
 
 
 ## Installation auf einem Linux-Rechner mit Autostart
 
 
-Überprüfen Sie zunächst, ob Java installiert ist.  
-"Java -Version".  
+Überprüfe zunächst, ob Java installiert ist.  
+```Java -Version```
   
-Andernfalls installieren Sie die neueste Java8:  
-```sudo apt-get install oracle-java8-jdk```` installieren  
+Andernfalls installiere die neueste Java8:  
+```sudo apt-get install oracle-java8-jdk```
+installieren  
 
-Stellen Sie Ihre Zeitzone ein: z.B.  
-```` sudo timedatectl set timezone Europe/Berlin```````  
+Stelle die Zeitzone ein: z.B.  
+``` sudo timedatectl set timezone Europe/Berlin``` 
 
 
-### AWTRIX Server herunterladen**
+### AWTRIX Server herunterladen
 
 ```sudo mkdir /usr/local/awtrix```  
 ```cd /usr/local/awtrix```    
@@ -69,10 +66,10 @@ Stellen Sie Ihre Zeitzone ein: z.B.
 
 ### Autostart
 
-Create a file under  **/etc/systemd/system/** with nano or vi. eg.  
+Erzeuge eine neue Datei unter **/etc/systemd/system/** mit nano oder vi.  
 ```sudo nano /etc/systemd/system/awtrix.service```  
   
-Fügen Sie den untenstehenden Code in diese neue Datei ein:
+Füge den untenstehenden Code in diese neue Datei ein:
 
 ```
 [Unit]
@@ -92,10 +89,9 @@ WantedBy=multi-user.target
 
 
 
-Erstellen Sie eine neue Datei unter ***/usr/local/bin/*** eg.   
+Erstelle eine neue Datei unter ***/usr/local/bin/***.   
 ```sudo nano /usr/local/bin/awtrix.sh```  
-  
-Und fügen Sie diesen Code ein
+und füge diesen Code ein
 
 ```
 #!/bin/sh
@@ -142,24 +138,30 @@ case $1 in
 esac
 ```
 
-Speichern der Datei und Erteilen von Ausführungsrechten
+Speichere die Datei und erteile Ausführungsrechte
 
 ``` sudo chmod +x /usr/local/bin/awtrix.sh``` 
 
-Testen Sie, ob es damit läuft:  
+Teste, ob es damit läuft:  
 ```sudo /usr/local/bin/./awtrix.sh start```     
-Testen Sie, ob es mit stoppt:   
-```sudo /usr/local/bin/./awtrix.sh stop```     
-Testen Sie, ob der Neustart mit:  
+
+Wenn das geklappt hat, teste, ob es mit:   
+```sudo /usr/local/bin/./awtrix.sh stop```
+stoppt.     
+
+Der Neustart testet man mit:  
 ```sudo /usr/local/bin/./awtrix.sh restart```     
 
 Wenn alles funktioniert, aktiviere den Dienst mit 
+
 ```sudo systemctl enable awtrix``` 
 
+Ab nun kannst du
 
-AWTRIX Starten  
+AWTRIX starten mit 
 ```sudo systemctl start awtrix.service ```  
-AWTRIX Stoppen 
-```sudo systemctl stop awtrix.service```   
-AWTRIX Neustarten
+AWTRIX stoppen mit
+```sudo systemctl stop awtrix.service```
+und   
+AWTRIX neu starten mit
 ```sudo systemctl restart awtrix.service``` 
